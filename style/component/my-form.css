@@ -1,0 +1,46 @@
+
+/*
+    ┌──────────────────────────────────────────────────────────────────────────────┐
+    │                                                                              │
+    │ style/component/my-form.css                                                  │
+    │                                                                              │
+    │ This CSS file is directly imported through the `my-form` template            │
+    │ defined in the `index.html` file.                                            │
+    │                                                                              │
+    │ It's used to demonstrate how we can isolate or share styles between          │
+    │ our components.                                                              │
+    │                                                                              │
+    │ @author Matt Kenefick <medium.com/@mattkenefick>                             │
+    │                                                                              │
+    └──────────────────────────────────────────────────────────────────────────────┘
+*/
+
+form {
+    background-color: #432E36;
+    border-radius: 1rem;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        0 100px 80px rgba(0, 0, 0, 0.07)
+    ;
+    display: block;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+form fieldset legend {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+}

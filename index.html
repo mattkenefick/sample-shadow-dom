@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+        <style>
+            body {
+                background-color: #260C1A;
+                color: #fff;
+                font-family: Ubuntu, Helvetica, Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <!--
+                Include our `my-form` element that includes a <slot> which
+                allows us to nest additional shadow-dom elements
+            -->
+            <my-form>
+                <my-input></my-input>
+            </my-form>
+
+            <hr />
+
+            <!--
+                Include the dynamic `my-input` element outside of
+                other shadow-dom elements
+            -->
+            <my-input></my-input>
+        </main>
+
+        <!--
+            Here we include templates directly on the DOM so we can pick them up
+            through our autoloader. It's fine for testing, but can make a mess.
+
+            This version links to an external CSS file, where as our other
+            example uses a directly included <style> tag.
+        -->
+        <template id="my-form">
+            <link rel="stylesheet" href="./style/component/my-form.css" />
+
+            <form class="my-form">
+                <fieldset>
+                    <legend>My Form Element</legend>
+                    <slot></slot>
+                </fieldset>
+            </form>
+        </template>
+
+        <!--
+            Initialize Application
+        -->
+        <script src="./script/main.js" type="module"></script>
+    </body>
+</html>
