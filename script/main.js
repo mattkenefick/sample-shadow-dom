@@ -23,4 +23,4 @@ Array.from(document.getElementsByTagName('template')).forEach(element => {
 // Instantiate Remote Templates
 // ----------------------------------------------------------------------------
 
-MyInputElement.attachRemote('../view/component/my-input.html');
+MyInputElement.attachRemote('./view/component/my-input.html');
